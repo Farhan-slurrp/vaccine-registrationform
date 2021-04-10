@@ -57,13 +57,13 @@ const Form = () => {
           </div>
         </DateGender>
         <EmailPhone>
-          <div className="container">
+          <div className="emailphone-input">
             <label htmlFor="email">
               Email<sup className="star">*</sup>
             </label>
             <Input type="email" id="email" required />
           </div>
-          <div className="container">
+          <div className="emailphone-input">
             <label htmlFor="phone">
               Phone Number<sup className="star">*</sup>
             </label>
@@ -77,13 +77,13 @@ const Form = () => {
           <Input type="text" id="address" required />
         </Address>
         <CityState>
-          <div className="name-input">
+          <div className="citystate-input">
             <label htmlFor="city">
               City<sup className="star">*</sup>
             </label>
             <Input type="text" id="city" required />
           </div>
-          <div className="name-input">
+          <div className="citystate-input">
             <label htmlFor="state">
               State/Province<sup className="star">*</sup>
             </label>
@@ -123,6 +123,9 @@ const FormContainer = styled.form`
       color: #f00;
     }
   }
+  @media (max-width: 768px) {
+    margin-left: 0em;
+  }
 `;
 
 const Name = styled.div`
@@ -132,6 +135,13 @@ const Name = styled.div`
   .name-input {
     width: 50%;
   }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5em;
+    .name-input {
+      width: 74vw;
+    }
+  }
 `;
 
 const DateGender = styled.div`
@@ -139,7 +149,7 @@ const DateGender = styled.div`
   width: 100%;
   display: flex;
   #date {
-    width: 241.6%;
+    width: 31.2vw;
     height: 2.2em;
     padding-left: 0.2em;
     margin-top: 0.3em;
@@ -152,9 +162,9 @@ const DateGender = styled.div`
     }
   }
   .gender-container {
-    margin-left: 31.5%;
+    margin-left: 3vw;
     select {
-      width: 564.5%;
+      width: 31.6vw;
       height: 2.2em;
       padding-left: 0.2em;
       margin-top: 0.3em;
@@ -165,6 +175,9 @@ const DateGender = styled.div`
         border-color: #719ece;
         box-shadow: 0 0 4px #719ece;
       }
+      @media (max-width: 768px) {
+        width: 32.3vw;
+      }
     }
   }
 `;
@@ -174,7 +187,7 @@ const EmailPhone = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  .container {
+  .emailphone-input {
     width: 50%;
     input[type="number"] {
       -moz-appearance: textfield;
@@ -183,6 +196,13 @@ const EmailPhone = styled.div`
     input::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5em;
+    .emailphone-input {
+      width: 74vw;
     }
   }
 `;
@@ -200,8 +220,15 @@ const CityState = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  .name-input {
+  .citystate-input {
     width: 50%;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5em;
+    .citystate-input {
+      width: 74vw;
+    }
   }
 `;
 
@@ -223,7 +250,7 @@ const Button = styled.button`
   width: 80%;
   postion: absolute;
   margin-top: 3em;
-  margin-right: 3.2em;
+  margin-right: 3.8vw;
   margin-bottom: 1.5em;
   padding: 0.6em 0em;
   color: white;
