@@ -32,6 +32,10 @@ const Container = styled.div`
   img {
     width: 10em;
     height: 13em;
+    @media (max-width: 597px) {
+      width: 7em;
+      height: 10em;
+    }
   }
   h1 {
     text-align: center;

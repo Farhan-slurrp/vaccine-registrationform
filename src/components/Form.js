@@ -124,6 +124,7 @@ const FormContainer = styled.form`
     }
   }
   @media (max-width: 768px) {
+    width: 80%;
     margin-left: 0em;
   }
 `;
@@ -139,7 +140,7 @@ const Name = styled.div`
     flex-direction: column;
     gap: 1.5em;
     .name-input {
-      width: 74vw;
+      width: 85vw;
     }
   }
 `;
@@ -160,6 +161,9 @@ const DateGender = styled.div`
       border-color: #719ece;
       box-shadow: 0 0 4px #719ece;
     }
+    @media (max-width: 768px) {
+      width: 33vw;
+    }
   }
   .gender-container {
     margin-left: 3vw;
@@ -176,7 +180,7 @@ const DateGender = styled.div`
         box-shadow: 0 0 4px #719ece;
       }
       @media (max-width: 768px) {
-        width: 32.3vw;
+        width: 40vw;
       }
     }
   }
@@ -202,7 +206,7 @@ const EmailPhone = styled.div`
     flex-direction: column;
     gap: 1.5em;
     .emailphone-input {
-      width: 74vw;
+      width: 85vw;
     }
   }
 `;
@@ -227,7 +231,7 @@ const CityState = styled.div`
     flex-direction: column;
     gap: 1.5em;
     .citystate-input {
-      width: 74vw;
+      width: 85vw;
     }
   }
 `;

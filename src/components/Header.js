@@ -40,4 +40,7 @@ const Title = styled.div`
   font-family: "Source Sans Pro", sans-serif;
   margin-top: 0.2em;
   padding: 0.7em;
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
