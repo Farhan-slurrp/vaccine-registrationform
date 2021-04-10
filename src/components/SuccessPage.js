@@ -30,27 +30,42 @@ const Container = styled.div`
   align-items: center;
   margin-top: -1em;
   img {
-    width: 11%;
-    height: 30%;
+    width: 10em;
+    height: 13em;
   }
   h1 {
+    text-align: center;
     margin-top: -0.3em;
     font-family: "Montserrat", sans-serif;
     font-size: 2.5em;
     color: #333;
   }
   #msg {
+    text-align: center;
     margin-top: 1em;
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     color: #333;
+    @media (max-width: 597px) {
+      padding: 0 0.8em;
+    }
   }
   .info {
     background-color: rgb(0 255 0 / 15%);
-    width: 40%;
+    width: 40vw;
     text-align: center;
     font-size: 1em;
     margin-top: 1em;
     padding: 0.7em;
+    @media (max-width: 1151px) {
+      width: 50vw;
+    }
+    @media (max-width: 914px) {
+      width: 60vw;
+    }
+    @media (max-width: 762px) {
+      margin-top: 3em;
+      width: 80vw;
+    }
   }
 `;
