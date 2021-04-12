@@ -24,13 +24,25 @@ const Form = () => {
             <label htmlFor="firstname">
               First Name<sup className="star">*</sup>
             </label>
-            <Input type="text" id="firstname" required />
+            <Input
+              type="text"
+              id="firstname"
+              onInvalid={(e) => e.currentTarget.classList.add("error-input")}
+              onChange={(e) => e.currentTarget.classList.remove("error-input")}
+              required
+            />
           </div>
           <div className="name-input">
-            <label htmlFor="lastname">
+            <label htmlFor="lastname" id="lastname-label">
               Last Name<sup className="star">*</sup>
             </label>
-            <Input type="text" id="lastname" required />
+            <Input
+              type="text"
+              id="lastname"
+              required
+              onInvalid={(e) => e.currentTarget.classList.add("error-input")}
+              onChange={(e) => e.currentTarget.classList.remove("error-input")}
+            />
           </div>
         </Name>
         <DateGender>
@@ -39,10 +51,11 @@ const Form = () => {
               Date of Birth<sup className="star">*</sup>
             </label>
             <DatePicker
+              type="date"
               id="date"
               selected={date}
-              onChange={(date) => setDate(date)}
               placeholderText="MM/DD/YYYY"
+              onChange={(date) => setDate(date)}
               required
             />
           </div>
@@ -61,33 +74,64 @@ const Form = () => {
             <label htmlFor="email">
               Email<sup className="star">*</sup>
             </label>
-            <Input type="email" id="email" required />
+            <Input
+              type="email"
+              id="email"
+              onInvalid={(e) => e.currentTarget.classList.add("error-input")}
+              onChange={(e) => e.currentTarget.classList.remove("error-input")}
+              required
+            />
           </div>
           <div className="emailphone-input">
-            <label htmlFor="phone">
+            <label htmlFor="phone" id="phone-label">
               Phone Number<sup className="star">*</sup>
             </label>
-            <Input type="number" minLength="8" id="phone" required />
+            <Input
+              type="number"
+              minLength="8"
+              id="phone"
+              onInvalid={(e) => e.currentTarget.classList.add("error-input")}
+              onChange={(e) => e.currentTarget.classList.remove("error-input")}
+              required
+            />
           </div>
         </EmailPhone>
         <Address>
           <label htmlFor="address">
             Address<sup className="star">*</sup>
           </label>
-          <Input type="text" id="address" required />
+          <Input
+            type="text"
+            id="address"
+            onInvalid={(e) => e.currentTarget.classList.add("error-input")}
+            onChange={(e) => e.currentTarget.classList.remove("error-input")}
+            required
+          />
         </Address>
         <CityState>
           <div className="citystate-input">
             <label htmlFor="city">
               City<sup className="star">*</sup>
             </label>
-            <Input type="text" id="city" required />
+            <Input
+              type="text"
+              id="city"
+              onInvalid={(e) => e.currentTarget.classList.add("error-input")}
+              onChange={(e) => e.currentTarget.classList.remove("error-input")}
+              required
+            />
           </div>
           <div className="citystate-input">
-            <label htmlFor="state">
+            <label htmlFor="state" id="state-label">
               State/Province<sup className="star">*</sup>
             </label>
-            <Input type="text" id="state" required />
+            <Input
+              type="text"
+              id="state"
+              onInvalid={(e) => e.currentTarget.classList.add("error-input")}
+              onChange={(e) => e.currentTarget.classList.remove("error-input")}
+              required
+            />
           </div>
         </CityState>
         <Button type="submit">REGISTER</Button>
@@ -138,7 +182,9 @@ const Name = styled.div`
   }
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 1.5em;
+    #lastname-label {
+      margin-top: 1.5em;
+    }
     .name-input {
       width: 85vw;
     }
@@ -204,7 +250,9 @@ const EmailPhone = styled.div`
   }
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 1.5em;
+    #phone-label {
+      margin-top: 1.5em;
+    }
     .emailphone-input {
       width: 85vw;
     }
@@ -229,7 +277,9 @@ const CityState = styled.div`
   }
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 1.5em;
+    #state-label {
+      margin-top: 1.5em;
+    }
     .citystate-input {
       width: 85vw;
     }

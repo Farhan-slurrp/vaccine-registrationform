@@ -33,7 +33,7 @@ const Container = styled.div`
     width: 10em;
     height: 13em;
     @media (max-width: 597px) {
-      width: 7em;
+      width: 7.9em;
       height: 10em;
     }
   }
